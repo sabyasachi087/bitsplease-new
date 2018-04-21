@@ -1,0 +1,26 @@
+{
+	"version": 1,
+	"disable_existing_loggers": false,
+	"formatters": {
+		"simple": {
+			"format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+		}
+	},
+	"handlers": {
+		"all_file_handler": {
+			"class": "logging.handlers.RotatingFileHandler",
+			"level": "INFO",
+			"formatter": "simple",
+			"filename": "hand_gesture_rcg.log",
+			"maxBytes": 10485760,
+			"backupCount": 20,
+			"encoding": "utf8"
+		}
+	},
+	"root": {
+		"level": "INFO",
+		"handlers": [
+			"all_file_handler"
+		]
+	}
+}
